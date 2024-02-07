@@ -1,0 +1,17 @@
+﻿<Window x:Class="Minimallogin.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minimallogin"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="269.925" Width="375.328" WindowStartupLocation ="CenterScreen"  DataContext="{Binding LoginVM, Source={StaticResource locator}}">
+    <Grid>
+        <TextBox x:Name="textBox" Height="20" Margin="10,45,10,0" TextWrapping="Wrap" Text="{Binding Username}" VerticalAlignment="Top" MaxLength="50"/>
+        <Button x:Name="button" Content="Войти" Margin="154,165,35,0" Height="34" VerticalAlignment="Top" Command="{Binding LoginComm}"/>
+        <CheckBox x:Name="checkBox" IsChecked="{Binding Remember}" Content="Запомнить" HorizontalAlignment="Left" Margin="42,175,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Password}" Margin="10,102,10,0" VerticalAlignment="Top" Height="20"  />
+        <TextBlock x:Name="textBlock" Margin="10,26,227,0" TextWrapping="Wrap" Text="Логин:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1" Margin="10,81,227,0" TextWrapping="Wrap" Text="Пароль:" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
